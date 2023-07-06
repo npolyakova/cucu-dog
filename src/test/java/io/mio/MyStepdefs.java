@@ -25,7 +25,8 @@ public class MyStepdefs {
 
     @Given("unauthorized user opened the site")
     public void openUrl() {
-        Configuration.browser = "firefox";
+        Configuration.remote = "http://localhost:4444/wd/hub";
+        Configuration.browser = "chrome";
         Configuration.baseUrl = "https://podberi-sobaku.ru";
         open("/");
     }
