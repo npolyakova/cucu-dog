@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.platform:junit-platform-suite:1.9.2'
+    testImplementation 'io.cucumber:cucumber-java:7.12.1'
+    implementation 'io.cucumber:cucumber-junit-platform-engine:7.12.1'
+    testImplementation 'org.assertj:assertj-core:3.24.2'
+    implementation 'io.qameta.allure:allure-test-filter:2.23.0'
+    implementation 'org.junit.platform:junit-platform-launcher:1.10.0-M1'
+    implementation 'com.codeborne:selenide:6.16.0'
+}
+
+test {
+    useJUnitPlatform()
+}
